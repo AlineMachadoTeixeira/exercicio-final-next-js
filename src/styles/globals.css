@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;600&display=swap");
+/* Source Code Pro', monospace */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+/* Variáveis CSS */
+:root {
+  --cor-primaria-fundo: #e41b41;
+  --cor-primaria-fundo-hover: #e6375c;
+  --cor-primaria: #f2f2f2;
+  --cor-primaria-hover: #e6375c;
+  --cor-secundaria-fundo: #378736;
+  --cor-secundaria-fundo-hover: #326632;
+  --cor-secundaria: #e4e3f2;
+  --cor-secundaria-hover: #e2e2eb;
+  --sombra-box: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --borda-arredondada: 0.5rem;
+  --marrom: #a36634;
+}
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Code Pro", sans-serif;
+  background-color: #ededf7;
+
+  /* Propriedades recomendadas para
+  minimizar a chance de serrilhamento de fontes
+  em certos navegadores/dispositivos */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3 {
+  font-family: "Source Code Pro", sans-serif;
+}
+
+h2 {
+  margin: 1rem 0;
+  color: #252221;
+  background-color: #f7f7f7;
+  padding: 1rem;
+  box-shadow: var(--sombra-box);
+  border-radius: var(--borda-arredondada);
+  font-weight: bold;
+}
+/* .limitador {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+} */
