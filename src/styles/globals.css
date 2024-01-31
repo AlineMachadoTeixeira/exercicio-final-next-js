@@ -7,17 +7,19 @@
 }
 /* Variáveis CSS */
 :root {
-  --cor-primaria-fundo: #e41b41;
-  --cor-primaria-fundo-hover: #e6375c;
+  --cor-primaria-fundo: #e41b41; /* Botão hover  */
+  --cor-primaria-fundo-hover: #ea577c; /* Botão e logo */
   --cor-primaria: #f2f2f2;
   --cor-primaria-hover: #e6375c;
   --cor-secundaria-fundo: #378736;
+  --novotitulo: #15a883; /* titulos */
   --cor-secundaria-fundo-hover: #326632;
   --cor-secundaria: #e4e3f2;
   --cor-secundaria-hover: #e2e2eb;
   --sombra-box: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   --borda-arredondada: 0.5rem;
-  --marrom: #4e3024;
+  /* --marrom: #4e3024; textos */
+  --marrom: #4a222b;
 }
 html {
   font-size: 18px;

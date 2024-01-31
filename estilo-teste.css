@@ -10,7 +10,7 @@
 }
 
 body {
-  font-size: 100%;
+  font-size: 10px;
   /* background: linear-gradient(68.15deg, #2f2325 16.62%, #8e5d52 85.61%); */
   background: linear-gradient(
     90deg,
@@ -29,8 +29,7 @@ body {
 }
 
 .cabecalho-imagem {
-  /* height: 100px; */
-  width: 8%;
+  height: 100px;
 }
 
 .cabecalho-menu {
@@ -40,14 +39,15 @@ body {
 
 .cabecalho-menu-item {
   font-family: "Source Code Pro", sans-serif;
-  color: #4e3024;
+  /* color: #4e3024; */
+  color: #4a222b;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .conteudo {
   margin-bottom: 48px;
-  border-top: 0.4px solid #4e3024;
+  border-top: 0.4px solid #4a222b;
 }
 
 .conteudo-principal {
@@ -67,18 +67,20 @@ body {
   font-family: "Fira Sans", sans-serif;
   font-weight: 600;
   font-size: 64px;
-  color: #378736;
+  /* color: #378736; */
+  color: #15a883;
 }
 
 .conteudo-principal-escrito-subtitulo {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 24px;
-  color: #4e3024;
+  color: #4a222b;
 }
 
 .conteudo-principal-escrito-botao {
-  background-color: #ecd6c4;
+  /* background-color: #ecd6c4; */
+  background-color: #ea577c;
   width: 180px;
   height: 60px;
   border: none;
@@ -87,16 +89,16 @@ body {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 24px;
-  color: #2f2325;
+  color: #fff;
 }
 
 .conteudo-principal-escrito-botao:hover {
-  background-color: rgba(236, 214, 196, 0.53);
+  /* background-color: rgba(236, 214, 196, 0.53); */
+  background-color: #e41b41;
 }
 
 .conteudo-principal-imagem {
-  /* height: 430px; */
-  width: 30%;
+  height: 300px;
   margin-top: 10px;
 }
 
@@ -109,13 +111,14 @@ body {
 }
 
 .conteudo-secundario-titulo {
-  border-top: 0.4px solid #a36634;
+  /* border-top: 0.4px solid #a36634; */
+  border-top: 0.4px solid #4a222b;
   padding-top: 48px;
   font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 24px;
-  color: #fff2ef;
-
+  /* color: #378736; */
+  color: #15a883;
   margin-bottom: 16px;
 }
 
@@ -123,16 +126,17 @@ body {
   font-family: "Fira Sans", sans-serif;
   font-weight: 300;
   font-size: 18px;
-  color: #ecd6c4;
+  color: #4a222b;
+  margin-bottom: 10px;
 }
 
 .rodape {
   padding: 32px;
-  border-top: 0.4px solid #fff2e7;
+  border-top: 0.4px solid #4a222b;
 }
 
 .rodape-imagem {
-  height: 48px;
+  height: 55px;
   display: block;
   margin: 0 auto;
 }
