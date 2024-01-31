@@ -1,34 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;600&display=swap");
-/* Source Code Pro', monospace */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&family=Josefin+Sans:wght@400;700&family=Montserrat:wght@100;200;300;400;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,700;1,500&display=swap");
+/* Fira Sans', */
 *,
 *::after,
 *::before {
   box-sizing: border-box;
 }
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
 /* Variáveis CSS */
 :root {
-  --cor-primaria-fundo: #e41b41; /* Botão hover  */
-  --cor-primaria-fundo-hover: #ea577c; /* Botão e logo */
-  --cor-primaria: #f2f2f2;
-  --cor-primaria-hover: #e6375c;
-  --cor-secundaria-fundo: #378736;
-  --novotitulo: #15a883; /* titulos */
-  --cor-secundaria-fundo-hover: #326632;
-  --cor-secundaria: #e4e3f2;
-  --cor-secundaria-hover: #e2e2eb;
+  --cor-primaria-texto: #4a222b; /* paragrafos e linha */
+  --cor-primaria-titulo: #15a883; /* titulos */
+  --botao-hover: #e41b41; /* Botão hover  */
+  --botao: #ea577c; /* Botão e logo */
   --sombra-box: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   --borda-arredondada: 0.5rem;
-  /* --marrom: #4e3024; textos */
-  --marrom: #4a222b;
+  --fonte-geral: "Fira Sans", sans-serif;
 }
 html {
   font-size: 18px;
 }
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Source Code Pro", sans-serif;
-  background-color: #ededf7;
+  font-size: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 252, 233, 1) 42%,
+    rgba(255, 255, 240, 1) 81%
+  );
 
   /* Propriedades recomendadas para
   minimizar a chance de serrilhamento de fontes
@@ -39,20 +40,26 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Source Code Pro", sans-serif;
+  font-family: var(--fonte-geral);
 }
 
 h2 {
   margin: 1rem 0;
-  color: #252221;
+  color: var(--cor-primaria-titulo);
   background-color: #f7f7f7;
-  padding: 1rem;
+  /* padding: 1rem;
   box-shadow: var(--sombra-box);
-  border-radius: var(--borda-arredondada);
-  font-weight: bold;
+  border-radius: var(--borda-arredondada); */
+  font-weight: 600;
 }
-.limitador {
+/* .limitador {
   width: 90%;
   max-width: 1000px;
   margin: auto;
+} */
+
+.li {
+  font-family: var(--fonte-geral);
+  font-weight: 400;
+  color: var(--cor-primaria-texto);
 }
