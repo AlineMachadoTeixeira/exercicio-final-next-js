@@ -49,8 +49,8 @@ h2 {
   border-radius: var(--borda-arredondada);
   font-weight: bold;
 }
-/* .limitador {
+.limitador {
   width: 90%;
   max-width: 1000px;
   margin: auto;
-} */
+}
