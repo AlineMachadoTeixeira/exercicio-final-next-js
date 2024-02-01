@@ -52,7 +52,6 @@ h2 {
 /* INICIO  CSS da pagina inicial para h3 e li  */
 
 h3 {
-  border-top: 0.4px solid var(--cor-primaria-texto);
   padding-top: 48px;
   font-weight: 600;
   font-size: 26px;
