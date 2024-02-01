@@ -1,4 +1,5 @@
 import Container from "@/components/ui/Container";
+import Rodape from "@/components/ui/rodape";
 import Head from "next/head";
 
 export default function Produtos() {
@@ -15,6 +16,8 @@ export default function Produtos() {
           <p>teste</p>
         </Container>
       </section>
+
+      <Rodape />
     </>
   );
 }

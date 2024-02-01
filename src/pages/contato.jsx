@@ -1,4 +1,5 @@
 import Container from "@/components/ui/Container";
+import Rodape from "@/components/ui/rodape";
 import Head from "next/head";
 import styled from "styled-components";
 
@@ -47,6 +48,7 @@ export default function Contato() {
           </form>
         </Container>
       </StyledContato>
+      <Rodape />
     </>
   );
 }

@@ -27,11 +27,25 @@ const StyledNav = styled.nav`
     color: var(--cor-primaria-texto);
     font-weight: 600;
     font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--botao-hover);
+    padding: 8px 16px;
+    border-radius: 20px;
   }
   a.ativo {
-    background-color: var(--botao-hover);
-    padding: 8px;
+    background-color: var(--botao);
+    padding: 8px 16px;
     border-radius: 20px;
     color: #fff;
   }
+
+  @media (max-width: 670px) {
+    font-size: 18px;
+  }
 `;
+
+/**/

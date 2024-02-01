@@ -1,4 +1,5 @@
 import Container from "@/components/ui/Container";
+import Rodape from "@/components/ui/rodape";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -58,6 +59,7 @@ export default function Home() {
           </section>
         </Container>
       </StyledHome>
+      <Rodape />
     </>
   );
 }
@@ -71,6 +73,7 @@ const StyledHome = styled.section`
     margin-left: 20px;
     margin-right: 20px;
   }
+
   .conteudo-principal-escrito {
     display: flex;
     flex-direction: column;
@@ -79,7 +82,7 @@ const StyledHome = styled.section`
 
   h2 {
     font-weight: 600;
-    font-size: 50px;
+    font-size: 40px;
     color: var(--cor-primaria-titulo);
   }
   p {
@@ -134,5 +137,24 @@ const StyledHome = styled.section`
     font-size: 18px;
     color: #4a222b;
     margin-bottom: 10px;
+  }
+
+  /* Adiciona algum estilo para o responsivo */
+  @media (max-width: 670px) {
+    .conteudo-principal {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .conteudo-principal h2 {
+      margin-top: 20px;
+      font-size: 30px;
+    }
+
+    .conteudo-principal img {
+      margin-top: 20px;
+      align-self: center;
+    }
   }
 `;
