@@ -1,3 +1,4 @@
+import Container from "@/components/ui/Container";
 import Head from "next/head";
 
 export default function Contato() {
@@ -12,8 +13,10 @@ export default function Contato() {
         <meta name="Keywords" content="Frutas,contato" />
       </Head>
       <section>
-        <h2>Nosso contato</h2>
-        <p>teste</p>
+        <Container>
+          <h2>Nosso contato</h2>
+          <p>teste</p>
+        </Container>
       </section>
     </>
   );

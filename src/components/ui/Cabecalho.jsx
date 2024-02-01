@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import Menu from "./Menu";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Cabecalho() {
   return (
@@ -7,11 +10,12 @@ export default function Cabecalho() {
         <Link href="/">
           <Image
             src="/images/frutado-logo.svg"
-            width={48}
-            height={48}
+            width={100}
+            height={100}
             alt="Logo Frutado"
           />
         </Link>
+        <Menu />
       </h1>
     </StyledHeader>
   );
@@ -24,7 +28,9 @@ const StyledHeader = styled.header`
     align-items: center;
     justify-content: space-around;
     padding: 24px;
-
-    /* Imagem não mexi no css */
+  }
+  nav {
+    display: flex;
+    gap: 32px;
   }
 `;

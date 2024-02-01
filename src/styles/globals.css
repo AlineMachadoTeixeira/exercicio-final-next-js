@@ -14,7 +14,7 @@
 :root {
   --cor-primaria-texto: #4a222b; /* paragrafos e linha */
   --cor-primaria-titulo: #15a883; /* titulos */
-  --botao-hover: #e41b41; /* Botão hover  */
+  --botao-hover: #ca3b55; /* Botão hover  */
   --botao: #ea577c; /* Botão e logo */
   --sombra-box: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   --borda-arredondada: 0.5rem;
@@ -54,14 +54,13 @@ h2 {
 h3 {
   border-top: 0.4px solid var(--cor-primaria-texto);
   padding-top: 48px;
-  font-family: "Fira Sans", sans-serif;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 26px;
   color: var(--cor-primaria-titulo);
   margin-bottom: 16px;
 }
 
-li {
+p {
   font-family: var(--fonte-geral);
   color: var(--cor-primaria-texto);
   font-family: "Fira Sans", sans-serif;

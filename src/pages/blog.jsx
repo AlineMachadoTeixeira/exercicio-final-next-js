@@ -1,3 +1,4 @@
+import Container from "@/components/ui/Container";
 import Head from "next/head";
 
 export default function Produtos() {
@@ -9,8 +10,10 @@ export default function Produtos() {
         <meta name="Keywords" content="Frutas, melancia, feira, banana, maça" />
       </Head>
       <section>
-        <h2>Conheça nossas Frutas</h2>
-        <p>teste</p>
+        <Container>
+          <h2>Nosso contato</h2>
+          <p>teste</p>
+        </Container>
       </section>
     </>
   );
