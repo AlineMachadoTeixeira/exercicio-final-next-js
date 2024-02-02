@@ -1,16 +1,15 @@
 import Container from "@/components/ui/Container";
 import Rodape from "@/components/ui/rodape";
 import Head from "next/head";
-import serverApi from "./api/server";
-serverApi;
+import styled from "styled-components";
 
 export async function getStaticProps() {
   try {
-    const resposta = await fetch(`${serverApi}`);
+    const resposta = await fetch(`https://fruityvice.com/api/fruit/all`);
     const dados = await resposta.json();
 
     if (!resposta.ok) {
-      throw new Error(`Erro: ${resposta.staus} - ${resposta.statusText}`);
+      throw new Error(`Erro: ${resposta.status} - ${resposta.statusText}`);
     }
 
     return {
@@ -23,21 +22,85 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ dados }) {
+  const frutas = dados;
+
   return (
     <>
       <Head>
         <title>Frutado 2024</title>
-        <meta name="description" contente="O que os melhores frutos oferece" />
+        <meta name="description" content="O que os melhores frutos oferece" />
         <meta name="Keywords" content="Frutas, melancia, feira, banana, maça" />
       </Head>
-      <section>
+      <StyledFrutas>
         <Container>
-          <h2>Nosso contato</h2>
-          <p>teste</p>
+          {frutas.map((fruta) => {
+            return (
+              <article key={fruta.id} className="card-frutas">
+                <h3> {fruta.name} </h3>
+                <p> {fruta.family} </p>
+                <h4>Nutrições</h4>
+
+                <ul>
+                  <li>Calorias: {fruta.nutritions.calories}</li>
+                  <li>Açúcar: {fruta.nutritions.sugar}</li>
+                  <li>Carboidratos:{fruta.nutritions.carbohydrates}</li>
+                  <li>Proteína:{fruta.nutritions.protein}</li>
+                </ul>
+              </article>
+            );
+          })}
         </Container>
-      </section>
+      </StyledFrutas>
 
       <Rodape />
     </>
   );
 }
+
+const StyledFrutas = styled.article`
+  .card-frutas {
+    background-color: #fff;
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra-box);
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  h3 {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--cor-primaria-titulo);
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-family: var(--fonte-geral);
+    color: var(--cor-primaria-texto);
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--cor-primaria-texto);
+    margin-bottom: 8px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li {
+    font-family: var(--fonte-geral);
+    color: var(--cor-primaria-texto);
+    font-weight: 300;
+    font-size: 16px;
+    color: #4a222b;
+    margin-bottom: 8px;
+  }
+`;

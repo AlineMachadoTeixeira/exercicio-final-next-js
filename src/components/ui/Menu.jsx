@@ -11,7 +11,7 @@ export default function Menu() {
       </Link>
 
       <Link className={linkAtivo === "/blog" ? "ativo" : ""} href="/blog">
-        Blog
+        Frutas
       </Link>
 
       <Link className={linkAtivo === "/contato" ? "ativo" : ""} href="/contato">
