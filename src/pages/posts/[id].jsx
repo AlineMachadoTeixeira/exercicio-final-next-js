@@ -1,3 +1,8 @@
+import Container from "@/components/ui/Container";
+import styled from "styled-components";
+import serverApi from "../api/server";
+serverApi;
+
 export async function getStaticProps({ params }) {
   const { id } = params;
   console.log(id);
@@ -18,20 +23,16 @@ export async function getStaticProps({ params }) {
     };
   } catch (error) {
     console.error("Deu ruim:" + error.message);
-    /* Esse return  notFound: true  é para retorna o erro 404 da pagina404.jsx. Precisa fazer, pois os dados são dinamicos   */
+
     return {
       notFound: true,
     };
   }
 }
 
-/* getStaticPaths é obrigatória quando se trata de tranalhar com páginas/rotas dinâmicas, ou seja, que dependem de parâmetros para serem construídas. */
 export async function getStaticPaths() {
   return {
-    /* paths fica vazio pois todos os caminhos devem ser gerados sob demanda, ou seja, no momento em que a página for aberta */
     paths: [],
-
-    /* fallback fica como "blocking" para garantir que a página somente será renderizada após a conclusão da geração dos caminhos e dos dados estáticos */
     fallback: "blocking",
   };
 }
@@ -40,20 +41,97 @@ export default function Post({ post }) {
   const tituloPagina = `${post.titulo} - PetShop`;
   return (
     <>
-      <Head>
-        <title> {tituloPagina} - PetShop</title>
-        <meta name="description" content={post.descricao} />
-      </Head>
-
       <StyledPost>
-        <h2>{post.titulo}</h2>
         <Container>
-          <h3>{post.categoria}</h3>
-          <p>{post.descricao}</p>
+          <div>
+            <h3>Nome fruta</h3>
+            <p>Familia</p>
+            <h4>Nutrientes:</h4>
+            <ul>
+              <li>calorias</li>
+              <li>sugar</li>
+              <li>carbohydrates</li>
+              <li>protein</li>
+            </ul>
+          </div>
         </Container>
       </StyledPost>
     </>
   );
 }
 
-const StyledPost = styled.article``;
+const StyledPost = styled.article`
+  div {
+    background-color: #fff;
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra-box);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--cor-primaria-titulo);
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-family: var(--fonte-geral);
+    color: var(--cor-primaria-texto);
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--cor-primaria-texto);
+    margin-bottom: 8px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li {
+    font-family: var(--fonte-geral);
+    color: var(--cor-primaria-texto);
+    font-weight: 300;
+    font-size: 16px;
+    color: #4a222b;
+    margin-bottom: 8px;
+  }
+`;
+
+/* 
+ -- "name": "Persimmon",
+    "id": 52,
+   -- "family": "Ebenaceae",
+    "order": "Rosales",
+    "genus": "Diospyros",
+   -- "nutritions": {
+     -- "calories": 81,
+      "fat": 0,
+     -- "sugar": 18,
+     -- "carbohydrates": 18,
+     -- "protein": 0
+    }
+
+
+    "nome": "Caqui",
+    "id": 52,
+    "família": "Ebenáceas",
+    "pedido": "Rosales",
+    "gênero": "Diospyros",
+    "nutrições": {
+      "calorias": 81,
+      "gordo": 0,
+      "açúcar": 18,
+      "carboidratos": 18,
+      "proteína": 0
+    }
+     */
