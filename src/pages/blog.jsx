@@ -84,16 +84,15 @@ const StyledFrutas = styled.article`
   h3 {
     font-family: "Fira Sans", sans-serif;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 25px;
     color: var(--cor-primaria-titulo);
-    margin-bottom: 8px;
   }
 
   p {
     font-family: var(--fonte-geral);
     color: var(--cor-primaria-texto);
     font-weight: 300;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 10px;
   }
 
