@@ -1,8 +1,28 @@
 import Container from "@/components/ui/Container";
 import Rodape from "@/components/ui/rodape";
 import Head from "next/head";
+import serverApi from "./api/server";
+serverApi;
 
-export default function Produtos() {
+export async function getStaticProps() {
+  try {
+    const resposta = await fetch(`${serverApi}`);
+    const dados = await resposta.json();
+
+    if (!resposta.ok) {
+      throw new Error(`Erro: ${resposta.staus} - ${resposta.statusText}`);
+    }
+
+    return {
+      props: { dados },
+    };
+  } catch (error) {
+    console.error("Deu ruim: " + error.message);
+    return { notFound: true };
+  }
+}
+
+export default function Blog({ dados }) {
   return (
     <>
       <Head>
