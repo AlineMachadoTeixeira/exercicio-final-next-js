@@ -37,14 +37,16 @@ export default function Blog({ dados }) {
           {frutas.map((fruta) => {
             return (
               <article key={fruta.id} className="card-frutas">
-                <h3> {fruta.name} </h3>
-                <p>
-                  {" "}
-                  Familia: <strong>{fruta.family}</strong>{" "}
-                </p>
-                <Link href={`/posts/${fruta.id}`}>
-                  <button>Saiba Mais!</button>
-                </Link>
+                <h4> {fruta.name} </h4>
+                <div className="centralizar">
+                  <p>
+                    {" "}
+                    Familia: <strong>{fruta.family}</strong>{" "}
+                  </p>
+                  <Link href={`/posts/${fruta.id}`}>
+                    <button>Saiba Mais!</button>
+                  </Link>
+                </div>
 
                 {/* <h4>Nutrições</h4>
 
@@ -71,21 +73,26 @@ const StyledFrutas = styled.article`
   justify-content: space-around;
   margin-top: 20px;
 
+  .centralizar {
+  }
+
   .card-frutas {
     background-color: #fff;
     border-radius: var(--borda-arredondada);
     box-shadow: var(--sombra-box);
     padding: 20px;
     margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+
     width: 35%;
+    display: flex;
+    flex-direction: column;
   }
-  h3 {
+  h4 {
     font-family: "Fira Sans", sans-serif;
     font-weight: 600;
     font-size: 25px;
     color: var(--cor-primaria-titulo);
+    margin-top: 0px;
   }
 
   p {
