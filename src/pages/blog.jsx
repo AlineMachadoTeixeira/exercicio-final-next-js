@@ -32,29 +32,33 @@ export default function Blog({ dados }) {
         <meta name="description" content="O que os melhores frutos oferece" />
         <meta name="Keywords" content="Frutas, melancia, feira, banana, maça" />
       </Head>
-      <StyledFrutas>
-        <Container>
+      <Container>
+        <StyledFrutas>
           {frutas.map((fruta) => {
             return (
               <article key={fruta.id} className="card-frutas">
                 <h3> {fruta.name} </h3>
-                <p> {fruta.family} </p>
+                <p>
+                  {" "}
+                  Familia: <strong>{fruta.family}</strong>{" "}
+                </p>
                 <Link href={`/posts/${fruta.id}`}>
                   <button>Saiba Mais!</button>
                 </Link>
-                <h4>Nutrições</h4>
+
+                {/* <h4>Nutrições</h4>
 
                 <ul>
                   <li>Calorias: {fruta.nutritions.calories}</li>
                   <li>Açúcar: {fruta.nutritions.sugar}</li>
                   <li>Carboidratos:{fruta.nutritions.carbohydrates}</li>
                   <li>Proteína:{fruta.nutritions.protein}</li>
-                </ul>
+                </ul> */}
               </article>
             );
           })}
-        </Container>
-      </StyledFrutas>
+        </StyledFrutas>
+      </Container>
 
       <Rodape />
     </>
@@ -62,6 +66,11 @@ export default function Blog({ dados }) {
 }
 
 const StyledFrutas = styled.article`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+
   .card-frutas {
     background-color: #fff;
     border-radius: var(--borda-arredondada);
@@ -70,11 +79,12 @@ const StyledFrutas = styled.article`
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 20px;
+    width: 35%;
   }
   h3 {
     font-family: "Fira Sans", sans-serif;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 24px;
     color: var(--cor-primaria-titulo);
     margin-bottom: 8px;
   }
@@ -87,32 +97,10 @@ const StyledFrutas = styled.article`
     margin-bottom: 10px;
   }
 
-  h4 {
-    font-family: "Fira Sans", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: var(--cor-primaria-texto);
-    margin-bottom: 8px;
-  }
-
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  li {
-    font-family: var(--fonte-geral);
-    color: var(--cor-primaria-texto);
-    font-weight: 300;
-    font-size: 16px;
-    color: #4a222b;
-    margin-bottom: 8px;
-  }
-
   button {
     background-color: var(--botao);
     width: 100px;
-    height: 40px;
+    height: 35px;
     border: none;
     box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
@@ -123,6 +111,13 @@ const StyledFrutas = styled.article`
 
     &:hover {
       background-color: var(--botao-hover);
+    }
+  }
+
+  @media (max-width: 670px) {
+    flex-direction: column;
+    .card-frutas {
+      width: 90%;
     }
   }
 `;

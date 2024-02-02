@@ -1,6 +1,8 @@
 import Container from "@/components/ui/Container";
 import styled from "styled-components";
 import serverApi from "../api/server";
+import Link from "next/link";
+import Rodape from "@/components/ui/rodape";
 serverApi;
 
 export async function getStaticProps({ params }) {
@@ -40,36 +42,55 @@ export async function getStaticPaths() {
 export default function Post({ post }) {
   return (
     <>
-      <StyledPost>
-        <Container>
-          <div>
+      <Container>
+        <StyledPost>
+          <div className="card-frutas">
             <h3>{post.name}</h3>
-            <p>{post.family}</p>
+            <p>
+              Familia: <strong>{post.family}</strong>
+            </p>
 
+            <h4>
+              {" "}
+              <strong>Nutrições</strong>
+            </h4>
             <ul>
-              <li>{post.nutritions.sugar}sugar</li>
-              <li>{post.nutritions.carbohydrates}carbohydrates</li>
-              <li>{post.nutritions.protein}protein</li>
+              <li>Calorias: {post.nutritions.calories}</li>
+              <li>Açúcar: {post.nutritions.sugar}</li>
+              <li>Carboidratos: {post.nutritions.carbohydrates}</li>
+              <li>Proteína: {post.nutritions.protein}</li>
             </ul>
+
+            <Link href="/blog">
+              <button>Voltar</button>
+            </Link>
           </div>
-        </Container>
-      </StyledPost>
+        </StyledPost>
+      </Container>
+
+      <Rodape />
     </>
   );
 }
 
 const StyledPost = styled.article`
-  div {
+  display: flex;
+
+  margin-top: 20px;
+
+  .card-frutas {
     background-color: #fff;
     border-radius: var(--borda-arredondada);
     box-shadow: var(--sombra-box);
     padding: 20px;
-    margin-bottom: 20px;
+    margin: auto;
+    width: 60%;
+    text-align: center;
   }
   h3 {
     font-family: "Fira Sans", sans-serif;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 30px;
     color: var(--cor-primaria-titulo);
     margin-bottom: 8px;
   }
@@ -77,17 +98,18 @@ const StyledPost = styled.article`
   p {
     font-family: var(--fonte-geral);
     color: var(--cor-primaria-texto);
-    font-weight: 300;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 20px;
     margin-bottom: 10px;
   }
 
   h4 {
     font-family: "Fira Sans", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 22px;
     color: var(--cor-primaria-texto);
     margin-bottom: 8px;
+    margin-top: 20px;
   }
 
   ul {
@@ -99,9 +121,27 @@ const StyledPost = styled.article`
     font-family: var(--fonte-geral);
     color: var(--cor-primaria-texto);
     font-weight: 300;
-    font-size: 16px;
+    font-size: 18px;
     color: #4a222b;
     margin-bottom: 8px;
+  }
+
+  button {
+    background-color: var(--botao);
+    width: 100px;
+    height: 40px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: var(--botao-hover);
+    }
   }
 `;
 
