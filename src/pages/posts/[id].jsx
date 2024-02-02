@@ -8,7 +8,7 @@ export async function getStaticProps({ params }) {
   console.log(id);
 
   try {
-    const resposta = await fetch(`${serverApi}/posts/${id}`);
+    const resposta = await fetch(`https://fruityvice.com/api/fruit/${id}`);
 
     if (!resposta.ok) {
       throw new Error(`Erro: ${resposta.status} - ${resposta.statusText}`);
@@ -45,12 +45,11 @@ export default function Post({ post }) {
           <div>
             <h3>{post.name}</h3>
             <p>{post.family}</p>
-            <h4>{post.nutritions}Nutrientes:</h4>
+
             <ul>
-              <li>{post.nutritions}calorias</li>
-              <li>{post.sugar}sugar</li>
-              <li>{post.carbohydrates}carbohydrates</li>
-              <li>{post.protein}protein</li>
+              <li>{post.nutritions.sugar}sugar</li>
+              <li>{post.nutritions.carbohydrates}carbohydrates</li>
+              <li>{post.nutritions.protein}protein</li>
             </ul>
           </div>
         </Container>

@@ -1,6 +1,7 @@
 import Container from "@/components/ui/Container";
 import Rodape from "@/components/ui/rodape";
 import Head from "next/head";
+import Link from "next/link";
 import styled from "styled-components";
 
 export async function getStaticProps() {
@@ -38,6 +39,9 @@ export default function Blog({ dados }) {
               <article key={fruta.id} className="card-frutas">
                 <h3> {fruta.name} </h3>
                 <p> {fruta.family} </p>
+                <Link href={`/posts/${fruta.id}`}>
+                  <button>Saiba Mais!</button>
+                </Link>
                 <h4>Nutrições</h4>
 
                 <ul>
@@ -65,6 +69,7 @@ const StyledFrutas = styled.article`
     padding: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
+    margin-right: 20px;
   }
   h3 {
     font-family: "Fira Sans", sans-serif;
@@ -102,5 +107,22 @@ const StyledFrutas = styled.article`
     font-size: 16px;
     color: #4a222b;
     margin-bottom: 8px;
+  }
+
+  button {
+    background-color: var(--botao);
+    width: 100px;
+    height: 40px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 10px;
+
+    &:hover {
+      background-color: var(--botao-hover);
+    }
   }
 `;
