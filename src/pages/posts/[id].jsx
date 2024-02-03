@@ -45,15 +45,15 @@ export default function Post({ post }) {
       <Container>
         <StyledPost>
           <div className="card-frutas">
-            <h3>{post.name}</h3>
+            <h4>{post.name}</h4>
             <p>
               Familia: <strong>{post.family}</strong>
             </p>
 
-            <h4>
+            <h5>
               {" "}
               <strong>Nutrições</strong>
-            </h4>
+            </h5>
             <ul>
               <li>Calorias: {post.nutritions.calories}</li>
               <li>Açúcar: {post.nutritions.sugar}</li>
@@ -87,12 +87,21 @@ const StyledPost = styled.article`
     width: 60%;
     text-align: center;
   }
-  h3 {
+
+  h4 {
     font-family: "Fira Sans", sans-serif;
     font-weight: 600;
     font-size: 30px;
     color: var(--cor-primaria-titulo);
-    margin-bottom: 8px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  h5 {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 20px;
   }
 
   p {
@@ -101,15 +110,6 @@ const StyledPost = styled.article`
     font-weight: 400;
     font-size: 20px;
     margin-bottom: 10px;
-  }
-
-  h4 {
-    font-family: "Fira Sans", sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    color: var(--cor-primaria-texto);
-    margin-bottom: 8px;
-    margin-top: 20px;
   }
 
   ul {

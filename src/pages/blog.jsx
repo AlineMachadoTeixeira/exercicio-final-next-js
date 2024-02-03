@@ -40,8 +40,7 @@ export default function Blog({ dados }) {
                 <h4> {fruta.name} </h4>
                 <div className="centralizar">
                   <p>
-                    {" "}
-                    Familia: <strong>{fruta.family}</strong>{" "}
+                    Familia: <strong>{fruta.family}</strong>
                   </p>
                   <Link href={`/posts/${fruta.id}`}>
                     <button>Saiba Mais!</button>
@@ -78,6 +77,7 @@ const StyledFrutas = styled.article`
 
   .card-frutas {
     background-color: #fff;
+    // background-image: url(public/images/fundo.svg);
     border-radius: var(--borda-arredondada);
     box-shadow: var(--sombra-box);
     padding: 20px;
@@ -104,7 +104,8 @@ const StyledFrutas = styled.article`
   }
 
   button {
-    background-color: var(--botao);
+    // background-color: var(--botao);
+    background-color: #f793a6;
     width: 100px;
     height: 35px;
     border: none;
@@ -116,7 +117,7 @@ const StyledFrutas = styled.article`
     margin-bottom: 10px;
 
     &:hover {
-      background-color: var(--botao-hover);
+      background-color: var(--botao);
     }
   }
 
@@ -124,6 +125,7 @@ const StyledFrutas = styled.article`
     flex-direction: column;
     .card-frutas {
       width: 90%;
+      margin-left: 30px;
     }
   }
 `;

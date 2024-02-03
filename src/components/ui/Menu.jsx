@@ -45,6 +45,8 @@ const StyledNav = styled.nav`
 
   @media (max-width: 670px) {
     font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 `;
 
