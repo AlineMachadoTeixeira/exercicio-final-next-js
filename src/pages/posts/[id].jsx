@@ -80,12 +80,16 @@ const StyledPost = styled.article`
 
   .card-frutas {
     background-color: #fff;
+    background-image: url("/images/fundo.svg");
+    background-size: cover;
+    /* background-attachment: fixed; */
     border-radius: var(--borda-arredondada);
     box-shadow: var(--sombra-box);
     padding: 20px;
     margin: auto;
     width: 60%;
     text-align: center;
+    border: 0.1rem solid var(--botao);
   }
 
   h4 {

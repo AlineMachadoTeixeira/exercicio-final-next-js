@@ -27,7 +27,10 @@ export default function Contato() {
     };
 
     try {
-      await fetch(`https://fruityvice.com/api/fruit`, opcoes);
+      await fetch(
+        `https://frutado-aline-default-rtdb.firebaseio.com/contato.json`,
+        opcoes
+      );
       alert("Dados enviados!");
       router.push("/");
     } catch (error) {
@@ -149,19 +152,20 @@ const StyledContato = styled.section`
   }
 
   button {
-  background-color: var(--botao);
-  width: 100%; /* Alteração aqui para ocupar a largura total */
-  height: 50px; /* Ajuste conforme necessário */
-  border: none;
-  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px; /* Ajuste conforme necessário */
-  font-weight: 400;
-  font-size: 16px; /* Ajuste conforme necessário */
-  color: #fff;
-  margin-bottom: 10px;
+    background-color: var(--botao);
+    width: 100%; /* Alteração aqui para ocupar a largura total */
+    height: 50px; /* Ajuste conforme necessário */
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px; /* Ajuste conforme necessário */
+    font-weight: 400;
+    font-size: 16px; /* Ajuste conforme necessário */
+    color: #fff;
+    margin-bottom: 10px;
 
-  &:hover {
-    background-color: var(--botao-hover);
+    &:hover {
+      background-color: var(--botao-hover);
+    }
   }
 
   p {

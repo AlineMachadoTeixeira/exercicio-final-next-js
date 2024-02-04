@@ -71,8 +71,7 @@ const StyledHome = styled.section`
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 1rem;
   }
 
   .conteudo-principal-escrito {

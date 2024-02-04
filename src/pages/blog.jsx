@@ -77,7 +77,6 @@ const StyledFrutas = styled.article`
 
   .card-frutas {
     background-color: #fff;
-    // background-image: url(public/images/fundo.svg);
     border-radius: var(--borda-arredondada);
     box-shadow: var(--sombra-box);
     padding: 20px;
