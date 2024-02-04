@@ -20,3 +20,25 @@ Geral
 - https://frutado-aline-default-rtdb.firebaseio.com/
 
 - Site Firebase https://console.firebase.google.com/u/0/project/frutado-aline/database/frutado-aline-default-rtdb/data?hl=pt-br
+
+### Criar `Firebase`
+
+- Entrar no https://firebase.google.com/ com a conta google
+- começar
+- criar o projeto
+- dar nome (dei o nome de frutado-aline-default-rtdb.firebaseio.com/)
+- continuar
+- desative o Ativar o Google Analytics neste projeto
+- criar projeto
+- aguardar
+- continuar
+- lado esquerdo
+- vai em criação
+- escolher: REaltime DataBase
+- criar banco de dados
+- local deixa ESTADO UNIDOS
+- proximo
+- Escolhe... iniciar no modo de - teste (Dura 30 dias )
+- Ativar
+
+Conversor de JSON para Firebase https://tableconvert.com/json-to-firebase
