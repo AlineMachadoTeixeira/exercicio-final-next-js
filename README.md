@@ -1,4 +1,7 @@
 Next.js - Exercício Final
+
+# site https://frutado-aline.vercel.app/
+
 Orientações gerais
 Geral
 

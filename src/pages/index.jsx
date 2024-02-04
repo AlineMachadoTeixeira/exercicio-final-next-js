@@ -18,7 +18,7 @@ export default function Home() {
         <Container>
           <section className="conteudo-principal">
             <div className="conteudo-principal-escrito">
-              <h2>Descubra o mundo incrível das frutas</h2>
+              <h2>Descubra o mundo incrível das frutas!</h2>
               <p>
                 Frutas são super legais! Elas têm sabores diferentes e fazem
                 muito bem para a gente. Cheias de coisas boas como fibras e
