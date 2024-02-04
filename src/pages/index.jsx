@@ -12,6 +12,7 @@ export default function Home() {
         <title>Produtos - Frutado</title>
         <meta name="description" contente="O que os melhores frutos oferece" />
         <meta name="Keywords" content="Frutas, melancia, feira, banana, maça" />
+        <link rel="shortcut icon" href="/images/frutado-logo.svg"></link>
       </Head>
       <StyledHome>
         <Container>
