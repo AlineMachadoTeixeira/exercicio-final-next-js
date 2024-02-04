@@ -14,3 +14,7 @@ Geral
    10 APIs grátis e legais para você consumir | by Belmiro | React Brasil | Medium
 
    API escolhida: https://www.fruityvice.com/#1
+
+## URL `Firebase`
+
+- https://frutado-aline-default-rtdb.firebaseio.com/
