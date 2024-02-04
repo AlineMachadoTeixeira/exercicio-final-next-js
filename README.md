@@ -18,3 +18,5 @@ Geral
 ## URL `Firebase`
 
 - https://frutado-aline-default-rtdb.firebaseio.com/
+
+- Site Firebase https://console.firebase.google.com/u/0/project/frutado-aline/database/frutado-aline-default-rtdb/data?hl=pt-br
