@@ -16,6 +16,10 @@ Geral
 
    10 APIs grátis e legais para você consumir | by Belmiro | React Brasil | Medium
 
+   1. site de API https://medium.com/reactbrasil/10-apis-gr%C3%A1tis-e-legais-para-voc%C3%AA-consumir-69141988ea0b
+
+   2.
+
    API escolhida: https://www.fruityvice.com/#1
 
 ## URL `Firebase`
