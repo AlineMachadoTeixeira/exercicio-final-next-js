@@ -51,3 +51,7 @@ Geral
 Conversor de JSON para Firebase https://tableconvert.com/json-to-firebase
 
 # site https://frutado-aline.vercel.app/
+
+#### Site que ajuda com o css do next
+
+https://nextui.org/docs/components/card
