@@ -1,7 +1,7 @@
 {
-  "short_name": "PetShop Aline",
-  "name": "PetShop incrível demais da conta e muito bacana",
-  "description": "Exemplo de uma PWA criada com Next.js",
+  "short_name": "Frutado Aline",
+  "name": "Frutado. Frutas são superlegais! Descubra seus nutrientes",
+  "description": "Exercício com Next.js",
   "icons": [
     {
       "src": "images/frutado-logo.svg",
